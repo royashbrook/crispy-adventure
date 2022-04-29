@@ -4,6 +4,7 @@ export async function callMSGraph(endpoint, token) {
     const bearer = `Bearer ${token}`;
 
     headers.append("Authorization", bearer);
+    headers.append("Accept", "application/json;odata.metadata=none");
 
     const options = {
         method: "GET",
@@ -13,7 +14,7 @@ export async function callMSGraph(endpoint, token) {
     try {
         const response = await fetch(endpoint, options);
         const data = await response.json();
-        return data.value;
+        return data;//.value;
     } catch (error) {
         return console.error(error);
     }

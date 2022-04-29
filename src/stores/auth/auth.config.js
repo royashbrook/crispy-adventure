@@ -13,5 +13,5 @@ export const loginRequest = {
     scopes: ["User.Read"]
 };
 export const tokenRequest = {
-    scopes: ["User.Read", "Files.Read.All"],
+    scopes: ["User.Read", "Sites.Read.All"],
 };
